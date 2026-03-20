@@ -1,3 +1,31 @@
+-- ========== KIỂM TRA LICENSE KEY ==========
+-- THAY URL NÀY BẰNG LINK THẬT CỦA BẠN
+local VERIFY_URL = "https://domain-cua-ban.com/verify_key.php"
+
+-- HÀM KIỂM TRA KEY
+local function checkLicense(key)
+    local success, response = pcall(function()
+        return game:HttpGet(VERIFY_URL .. "?license_key=" .. key)
+    end)
+    if success and response then
+        if response:find('"valid":true') then
+            return true
+        end
+    end
+    return false
+end
+
+-- KEY CỐ ĐỊNH (hoặc bạn có thể tạo popup nhập)
+local USER_KEY = "KEY_CUA_BAN_O_DAY"  -- 👈 THAY BẰNG KEY THẬT
+-- KIỂM TRA
+if not checkLicense(USER_KEY) then
+    print("❌ Key không hợp lệ hoặc đã hết hạn. Script dừng lại.")
+    return  -- THOÁT SCRIPT NGAY
+end
+print("✅ Key hợp lệ. Script tiếp tục chạy...")
+-- ========== KẾT THÚC KIỂM TRA KEY ==========
+
+-- ESP Mobs - Green
 -- ESP Mobs - Green Circle (5000 studs, small circle)
 
 local Players = game:GetService("Players")
