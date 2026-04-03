@@ -1,14 +1,4 @@
--- ========== KIỂM TRA LICENSE KEY ==========
 
--- KEY CỐ ĐỊNH (hoặc bạn có thể tạo popup nhập)
-local USER_KEY = "hoangdepzai"  -- 👈 THAY BẰNG KEY THẬT
--- KIỂM TRA
-if not checkLicense(USER_KEY) then
-    print("❌ Key không hợp lệ hoặc đã hết hạn. Script dừng lại.")
-    return  -- THOÁT SCRIPT NGAY
-end
-print("✅ Key hợp lệ. Script tiếp tục chạy...")
--- ========== KẾT THÚC KIỂM TRA KEY ==========
 
 -- ESP Mobs - Green
 -- ESP Mobs - Green Circle (5000 studs, small circle)
